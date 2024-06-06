@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-64*^0xm-@k%dscnfqv56=!3x#7*^y+$!c4_7jfrcwja*e6n834
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['87.242.118.67', 'warck30.ru', 'www.warck30.ru']
 
 # Application definition
 
@@ -117,6 +116,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
@@ -134,3 +135,5 @@ CACHES = {
         'LOCATION': 'unique-snowflake',
     }
 }
+
+

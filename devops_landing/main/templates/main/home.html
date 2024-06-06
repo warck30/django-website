@@ -1,6 +1,9 @@
 <!-- main/templates/main/home.html -->
 {% extends 'main/base.html' %}
+{% load cache %}
 {% block title %}Главная{% endblock %}
 {% block content %}
+{% cache 900 home %}
 <h1>Добро пожаловать на сайт DevOps инженера</h1>
+{% endcache %}
 {% endblock %}

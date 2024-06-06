@@ -3,14 +3,10 @@
 {% block title %}Главная{% endblock %}
 {% block content %}
 {% cache 900 home %}
-<h1>Добро пожаловать на сайт DevOps инженера</h1>
-<div style="display: flex; align-items: center;">
-    <div>
-        <p>Приветствую! Меня зовут Дима и я начинающий DevOps инженер.<br>В данный момент работаю Linux Администратором.</p>
-    </div>
-    <div style="margin-left: 20px;">
-        <img src="{% static 'main/main_photo.png' %}" alt="Фото Димы" class="rounded">
-    </div>
-</div>
+<h1>Приветствую!</h1>
+<p>Меня зовут Дима, и я начинающий DevOps инженер. В данный момент я работаю Linux Администратором.</p>
+{% with main_photo_url=STATIC_URL|add:'main/main_photo.png' %}
+    <img src="{{ main_photo_url }}" alt="Фото" style="border-radius: 50%; width: 150px; height: 150px;">
+{% endwith %}
 {% endcache %}
 {% endblock %}

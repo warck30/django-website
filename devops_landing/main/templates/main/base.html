@@ -1,12 +1,31 @@
-{% extends 'main/base.html' %}
-{% load cache %}
-{% block title %}Главная{% endblock %}
-{% block content %}
-{% cache 900 home %}
-<h1>Приветствую!</h1>
-<p>Меня зовут Дима, и я начинающий DevOps инженер. В данный момент я работаю Linux Администратором.</p>
-{% with main_photo_url=STATIC_URL|add:'main/main_photo.png' %}
-    <img src="{{ main_photo_url }}" alt="Фото" style="border-radius: 50%; width: 150px; height: 150px;">
-{% endwith %}
-{% endcache %}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DevOps Engineer{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'education_skills' %}">Образование и навыки</a></li>
+                <li><a href="{% url 'projects' %}">Pet-проекты</a></li>
+                <li><a href="{% url 'contacts' %}">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DevOps Engineer</p>
+    </footer>
+</body>
+</html>

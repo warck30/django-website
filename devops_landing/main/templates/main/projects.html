@@ -1,0 +1,14 @@
+<!-- main/templates/main/projects.html -->
+{% extends 'main/base.html' %}
+{% block title %}Pet-проекты{% endblock %}
+{% block content %}
+<h1>Pet-проекты</h1>
+<ul>
+    {% for project in projects %}
+        <li>
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.description }}</p>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

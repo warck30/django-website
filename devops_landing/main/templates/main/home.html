@@ -1,9 +1,16 @@
-<!-- main/templates/main/home.html -->
 {% extends 'main/base.html' %}
 {% load cache %}
 {% block title %}Главная{% endblock %}
 {% block content %}
 {% cache 900 home %}
 <h1>Добро пожаловать на сайт DevOps инженера</h1>
+<div style="display: flex; align-items: center;">
+    <div>
+        <p>Приветствую! Меня зовут Дима и я начинающий DevOps инженер.<br>В данный момент работаю Linux Администратором.</p>
+    </div>
+    <div style="margin-left: 20px;">
+        <img src="{% static 'main/main_photo.png' %}" alt="Фото Димы" class="rounded">
+    </div>
+</div>
 {% endcache %}
 {% endblock %}

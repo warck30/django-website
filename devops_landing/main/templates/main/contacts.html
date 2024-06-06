@@ -1,7 +1,19 @@
-<!-- main/templates/main/contacts.html -->
 {% extends 'main/base.html' %}
 {% block title %}Контакты{% endblock %}
 {% block content %}
 <h1>Контакты</h1>
-<p>Контактная информация...</p>
+<ul>
+    <li>
+        <img src="{% static 'main/github.png' %}" alt="GitHub" style="width: 20px; height: 20px; vertical-align: middle;">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </li>
+    <li>
+        <img src="{% static 'main/telegram.png' %}" alt="Telegram" style="width: 20px; height: 20px; vertical-align: middle;">
+        <a href="https://t.me/yourusername" target="_blank">Telegram</a>
+    </li>
+    <li>
+        <img src="{% static 'main/mail.png' %}" alt="Mail" style="width: 20px; height: 20px; vertical-align: middle;">
+        <a href="mailto:youremail@example.com">Email</a>
+    </li>
+</ul>
 {% endblock %}

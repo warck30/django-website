@@ -1,5 +1,3 @@
-/* main/static/main/style.css */
-
 /* Общие стили */
 body {
     font-family: Arial, sans-serif;
@@ -29,7 +27,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #000; /* Изменен цвет текста на черный */
     text-decoration: none;
     font-weight: bold;
 }
@@ -102,4 +100,11 @@ button {
 
 button:hover {
     background: #0056b3;
+}
+
+/* Стили для изображения в круге */
+img.rounded {
+    border-radius: 50%;
+    width: 150px; /* Вы можете изменить размер по вашему усмотрению */
+    height: 150px; /* Вы можете изменить размер по вашему усмотрению */
 }

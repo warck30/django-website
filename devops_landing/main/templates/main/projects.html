@@ -4,7 +4,7 @@
 <h1>Pet-проекты</h1>
 <ul>
     {% for project in projects %}
-        <li style="display: flex; align-items: center;">
+        <li style="display: flex; align-items: center; justify-content: space-between;">
             <div>
                 <h2>{{ project.title }}</h2>
                 <p>{{ project.description }}</p>
@@ -13,7 +13,7 @@
                 {% endif %}
             </div>
             {% if project.image %}
-                <div style="margin-left: 20px;">
+                <div>
                     <img src="{{ project.image.url }}" alt="Проект изображение" class="rounded">
                 </div>
             {% endif %}

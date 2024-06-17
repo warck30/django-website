@@ -9,4 +9,4 @@ urlpatterns = [
     path('education-skills/', views.education_skills, name='education_skills'),
     path('projects/', views.projects, name='projects'),
     path('contacts/', views.contacts, name='contacts'),
-] +  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
